@@ -1,5 +1,6 @@
 const Movies = () => {
-  console.log('test');
+  return <div>test</div>;
+  //   console.log('test');
 };
 
 export default Movies;
