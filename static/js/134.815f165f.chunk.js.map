@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/134.815f165f.chunk.js","mappings":"0JAKA,UALe,WACb,OAAO,iCAER,C","sources":["pages/Movies.jsx"],"sourcesContent":["const Movies = () => {\n  return <div>test</div>;\n  //   console.log('test');\n};\n\nexport default Movies;\n"],"names":[],"sourceRoot":""}
