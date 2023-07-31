@@ -26,14 +26,22 @@ export const getMovieDetails = async id => {
   );
 
   return response.json();
-  // .then(response => response.json())
-  // .then(response => console.log(response))
-  // .catch(err => console.error(err));
+};
 
-  // fetch(
-  //   `https://api.themoviedb.org/3/movie/${id}, options`
-  // );
+export const getMovieCast = async id => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}/credits`,
+    options
+  );
 
-  // // console.log('response', response.json());
-  //
+  return response.json();
+};
+
+export const getMovieReviews = async id => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/movie/${id}/reviews?page=1`,
+    options
+  );
+
+  return response.json();
 };

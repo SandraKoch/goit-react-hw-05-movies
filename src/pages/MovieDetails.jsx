@@ -1,7 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Suspense, useEffect, useState } from 'react';
+import { Outlet, useParams } from 'react-router-dom';
 import { getMovieDetails } from 'api';
 import Details from 'components/Details';
+import { Link } from 'react-router-dom';
+import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -21,7 +23,23 @@ const MovieDetails = () => {
     fetchMovieInfo(movieId);
   }, [movieId]);
 
-  return <div>{previevedMovie && <Details movie={previevedMovie} />}</div>;
+  return (
+    <div>
+      {previevedMovie && <Details movie={previevedMovie} />}
+
+      <nav className={css.navWrap}>
+        <Link to="cast" className={css.navLink}>
+          Cast
+        </Link>
+        <Link to="reviews" className={css.navLink}>
+          Reviews
+        </Link>
+      </nav>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
+    </div>
+  );
 };
 
 export default MovieDetails;

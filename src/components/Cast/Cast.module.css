@@ -1,0 +1,18 @@
+.castList {
+  display: flex;
+  padding: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.person {
+  padding-right: 10px;
+}
+
+.character {
+  max-width: 15vw;
+}
+
+.personImg {
+  max-width: 15vw;
+}
