@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <main>
-      <h1>Most Popular Movies Right Now:</h1>
+      <h1 style={{ paddingLeft: 20 }}>Most Popular Movies Right Now:</h1>
       <MovieList movies={trendingMovies} />
     </main>
   );

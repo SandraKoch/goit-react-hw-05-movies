@@ -1,0 +1,18 @@
+.movieList {
+  list-style: none;
+  padding: 0 40px;
+}
+
+.movieElement {
+  padding-bottom: 10px;
+}
+
+.movieLink {
+  text-decoration: none;
+  color: black;
+}
+
+.movieElement:hover {
+  text-transform: uppercase;
+  font-weight: 500;
+}
