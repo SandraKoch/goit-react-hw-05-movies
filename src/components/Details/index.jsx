@@ -4,7 +4,6 @@ import css from './Details.module.css';
 const Details = ({ movie }) => {
   return (
     <div className={css.movieContainer}>
-      <button>^ Previous page ^</button>
       <div className={css.detailsWrap}>
         <img
           id={movie.id}

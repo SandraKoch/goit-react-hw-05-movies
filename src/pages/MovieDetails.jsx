@@ -1,13 +1,13 @@
 import { Suspense, useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { getMovieDetails } from 'api';
 import Details from 'components/Details';
-import { Link } from 'react-router-dom';
 import css from './MovieDetails.module.css';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [previevedMovie, setPrevievedMovie] = useState(undefined);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchMovieInfo = async id => {
@@ -25,6 +25,10 @@ const MovieDetails = () => {
 
   return (
     <div>
+      <Link to={location?.state?.from ?? '/'}>
+        <button type="button">Go back</button>
+      </Link>
+
       {previevedMovie && <Details movie={previevedMovie} />}
 
       <nav className={css.navWrap}>

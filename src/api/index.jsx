@@ -45,3 +45,12 @@ export const getMovieReviews = async id => {
 
   return response.json();
 };
+
+export const searchMovies = async query => {
+  const response = await fetch(
+    `https://api.themoviedb.org/3/search/movie?query=${query}&include_adult=false`,
+    options
+  );
+
+  return response.json();
+};
