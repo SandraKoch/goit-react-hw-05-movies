@@ -15,4 +15,5 @@
 
 .movieImg {
   max-width: 33vw;
+  object-fit: contain;
 }

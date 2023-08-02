@@ -15,7 +15,7 @@ const Movies = () => {
         if (query !== '') {
           const apiResponse = await searchMovies(query);
           setMovies(apiResponse.results);
-          console.log('search', apiResponse);
+          // console.log('search', apiResponse);
         } else {
           setMovies(null);
         }

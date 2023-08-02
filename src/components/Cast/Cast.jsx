@@ -11,7 +11,7 @@ export const Cast = () => {
     const fetchMovieCast = async id => {
       try {
         const apiResponse = await getMovieCast(id);
-        console.log('fetch', apiResponse.cast);
+        // console.log('fetch', apiResponse.cast);
         setCast(apiResponse.cast);
       } catch (error) {
         console.log('fethMovieCast', error);
