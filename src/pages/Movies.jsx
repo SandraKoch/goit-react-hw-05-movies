@@ -3,6 +3,7 @@ import debounce from 'lodash.debounce';
 import { searchMovies } from 'api';
 import { useEffect, useState } from 'react';
 import MovieList from 'components/MovieList';
+import css from './Movies.module.css';
 
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -38,15 +39,16 @@ const Movies = () => {
 
   return (
     <div>
-      <form>
+      <form className={css.form}>
         <input
           defaultValue={query}
           type="text"
-          placeholder="Type the movie name here..."
+          placeholder="Type the movie name..."
           onChange={handleQueryChange}
+          className={css.input}
         />
-        <button type="submit" disabled>
-          Search
+        <button type="submit" disabled className={css.button}>
+          ← Search here
         </button>
       </form>
       {movies && <MovieList movies={movies} />}
