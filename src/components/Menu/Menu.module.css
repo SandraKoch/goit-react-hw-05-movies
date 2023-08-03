@@ -4,3 +4,7 @@
   cursor: pointer;
   margin-right: 20px;
 }
+
+.navLink:hover {
+  font-style: italic;
+}
