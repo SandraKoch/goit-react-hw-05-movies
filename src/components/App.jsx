@@ -10,7 +10,7 @@ const MovieDetails = lazy(() => import('../pages/MovieDetails'));
 
 export const App = () => {
   return (
-    <Routes basename={process.env.PUBLIC_URL}>
+    <Routes>
       <Route path="/" element={<CommonLayout />}>
         <Route index element={<Home />} />
         <Route path="movies" element={<Movies />} />
